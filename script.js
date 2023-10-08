@@ -1,5 +1,17 @@
 function minDate(dates) {
-  //write you code here
+  // Ensure the input array is not empty
+  if (dates.length === 0) {
+    return null; // Return null or throw an error, depending on your requirements
+  }
+
+  // Clone the array to avoid modifying the original array
+  const sortedDates = [...dates];
+
+  // Sort the array in ascending order
+  sortedDates.sort();
+
+  // Return the minimum date (first element after sorting)
+  return sortedDates[0];
 }
 
 // Do not change the code
@@ -37,4 +49,4 @@ var dates = [
   "2023/03/30",
 ];
 
-alert(minDate(dates));
+console.log(minDate(dates));
